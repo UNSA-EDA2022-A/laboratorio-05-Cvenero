@@ -29,23 +29,17 @@ public class Exercise1 {
 
 				auxiliar.push(s.charAt(i));
 
-				System.out.println("/-----/" + stack.top() + "//" + auxiliar.top());
-
 				if (stack.top() == '(' && auxiliar.top() == ')' || stack.top() == '[' && auxiliar.top() == ']'
 						|| stack.top() == '{' && auxiliar.top() == '}') {
-
-					System.out.println("//" + stack.top() + "//" + auxiliar.top());
 
 					stack.pop();
 					auxiliar.pop();
 
-					System.out.println("/POP/" + stack.top() + "//" + auxiliar.top());
 				} else {
 					cont++;
 				}
 
 			}
-			System.out.println(stack.top() + " y " + stack.size());
 
 			if (stack.isEmpty()) {
 				return true;
